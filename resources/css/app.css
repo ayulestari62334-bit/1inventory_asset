@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DASHBOARD CUSTOM STYLE ===== */
+
+.dashboard-card {
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.bg-primary-soft { background: #eff6ff; }
+.bg-success-soft { background: #ecfdf5; }
+.bg-warning-soft { background: #fffbeb; }
+.bg-danger-soft { background: #fee2e2; }

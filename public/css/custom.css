@@ -1,0 +1,107 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    background-color: #f4f6f9;
+    font-size: 14px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    border-radius: 6px;
+}
+
+.btn-primary {
+    box-shadow: 0 2px 6px rgba(13,110,253,.25);
+}
+
+/* =========================
+   TABLE
+========================= */
+.table {
+    background-color: #fff;
+}
+
+.table th {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.table td, 
+.table th {
+    vertical-align: middle;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-control {
+    border-radius: 6px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.15rem rgba(13,110,253,.25);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.main-sidebar {
+    box-shadow: 2px 0 10px rgba(0,0,0,.05);
+}
+
+.nav-sidebar .nav-link {
+    border-radius: 6px;
+    margin: 2px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-sidebar .nav-link.active {
+    box-shadow: 0 3px 8px rgba(0,0,0,.08);
+}
+
+/* =========================
+   FIX ICON SUBMENU (ANTI LINGKARAN)
+========================= */
+.nav-treeview .nav-icon {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    width: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CONTENT WRAPPER
+========================= */
+.content-wrapper {
+    background-color: #f4f6f9;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.main-footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+}
