@@ -58,7 +58,6 @@ $isAdmin = strtolower(auth()->user()->role ?? '') === 'administrator';
 ========================= */
 .modal-dialog.modal-dialog-centered {
     width: 360px;
-    height: 360px; /* tinggi = lebar → kotak */
     max-width: 100%;
 }
 
