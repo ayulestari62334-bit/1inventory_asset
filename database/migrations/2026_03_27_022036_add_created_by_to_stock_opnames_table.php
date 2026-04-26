@@ -8,15 +8,11 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::table('stock_opnames', function (Blueprint $table) {
-            $table->unsignedBigInteger('created_by')->after('status')->nullable();
-        });
+       
     }
 
     public function down(): void
     {
-        Schema::table('stock_opnames', function (Blueprint $table) {
-            $table->dropColumn('created_by');
-        });
+      
     }
 };

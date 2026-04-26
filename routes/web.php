@@ -65,24 +65,25 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [KaryawanController::class, 'index'])->name('.index');
     });
 
+    
     // ================= BARANG =================
     Route::prefix('barang')->name('barang')->group(function () {
-        Route::get('/', [BarangController::class, 'index'])->name('.index');
+        Route::get('/daftar', [BarangController::class, 'index'])->name('.index');
        
-        // ✅ SCAN QR (SEMUA USER BOLEH)
+        // SCAN QR (SEMUA USER BOLEH)
         Route::get('/scan/{id}', [BarangController::class, 'show'])->name('.scan');
         
         // DETAIL BARANG
         Route::get('/{id}', [BarangController::class, 'show'])->name('.show');
 
-        // ✅ ROUTE QR UNTUK SEMUA USER
+        // ROUTE QR UNTUK SEMUA USER
         Route::get('/qr/{id}', [BarangController::class, 'printQr'])->name('.qr');
 
     });
 
     /*
     |--------------------------------------------------------------------------
-    | 🔒 KHUSUS FULL ADMINISTRATOR (CRUD + QR PRINT)
+    | KHUSUS FULL ADMINISTRATOR (CRUD + QR PRINT)
     |--------------------------------------------------------------------------
     */
     Route::middleware('admin')->group(function () {
@@ -111,19 +112,21 @@ Route::middleware('auth')->group(function () {
         // ================= BARANG =================
         Route::delete('/barang/destroy-all', [BarangController::class, 'destroyAll'])->name('barang.destroyAll');
 
-        // ✅ CETAK 1 BARANG (ADMIN SAJA)
+        // CETAK 1 BARANG (ADMIN SAJA)
         Route::get('/barang/qr/{id}', [BarangController::class, 'printQr'])->name('barang.printQr');
 
-        // ✅ CETAK BEBERAPA BARANG
+        // CETAK BEBERAPA BARANG
         Route::post('/barang/qr/multiple', [BarangController::class, 'printMultiple'])->name('barang.printMultiple');
 
-        // ✅ CETAK SEMUA BARANG
+        // CETAK SEMUA BARANG
         Route::get('/barang/qr-all', [BarangController::class, 'printAll'])->name('barang.printAll');
 
         Route::post('/barang', [BarangController::class, 'store'])->name('barang.store');
         Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
         Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
     });
+
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -137,10 +140,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/', [StockOpnameController::class, 'store'])->name('.store');
         Route::get('/{id}', [StockOpnameController::class, 'show'])->name('.show');
 
-        // ✅ Update detail barang stock opname (semua user boleh)
+        // Update detail barang stock opname (semua user boleh)
         Route::post('/update-detail', [StockOpnameDetailController::class, 'update'])->name('.updateDetail');
 
-        // ✅ Close stock opname (hanya admin)
+        // Close stock opname (hanya admin)
         Route::post('/close/{id}', [StockOpnameController::class, 'close'])->name('.close');
 
         // Hapus stock opname (admin)
